@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import { headers } from "next/headers";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -13,36 +12,33 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export async function generateMetadata(): Promise<Metadata> {
-  const requestHeaders = await headers();
-  const host =
-    requestHeaders.get("x-forwarded-host") ??
-    requestHeaders.get("host") ??
-    "localhost:3000";
-  const protocol =
-    requestHeaders.get("x-forwarded-proto") ??
-    (host.startsWith("localhost") ? "http" : "https");
-  const metadataBase = new URL(`${protocol}://${host}`);
+const siteUrl = "https://posix4e.github.io/fuzzingbrain-control";
 
-  return {
-    metadataBase,
+export const metadata: Metadata = {
+  metadataBase: new URL(siteUrl),
+  title: "FuzzingBrain Control",
+  description:
+    "A pinned, reproducible model baseline for FuzzingBrain and future fuzzer integrations.",
+  openGraph: {
     title: "FuzzingBrain Control",
-    description:
-      "A pinned, reproducible model baseline for FuzzingBrain and future fuzzer integrations.",
-    openGraph: {
-      title: "FuzzingBrain Control",
-      description: "A fixed point for fuzzer progress.",
-      images: [{ url: "/og.png", width: 1536, height: 1024 }],
-      type: "website",
-    },
-    twitter: {
-      card: "summary_large_image",
-      title: "FuzzingBrain Control",
-      description: "A fixed point for fuzzer progress.",
-      images: ["/og.png"],
-    },
-  };
-}
+    description: "A fixed point for fuzzer progress.",
+    url: siteUrl,
+    images: [
+      {
+        url: `${siteUrl}/og.png`,
+        width: 1536,
+        height: 1024,
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "FuzzingBrain Control",
+    description: "A fixed point for fuzzer progress.",
+    images: [`${siteUrl}/og.png`],
+  },
+};
 
 export default function RootLayout({
   children,

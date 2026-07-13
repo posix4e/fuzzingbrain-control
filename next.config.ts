@@ -1,7 +1,15 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  output: "export",
+  basePath: "/fuzzingbrain-control",
+  trailingSlash: true,
+  turbopack: {
+    root: process.cwd(),
+  },
+  images: {
+    unoptimized: true,
+  },
 };
 
 export default nextConfig;

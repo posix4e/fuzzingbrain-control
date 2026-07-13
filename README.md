@@ -5,6 +5,8 @@ A pinned, reproducible direct-agent control for evaluating
 and future fuzzer integrations against
 [FuzzingBrain-Bench](https://github.com/OwenSanzas/FuzzingBrain-Bench).
 
+**Website:** <https://posix4e.github.io/fuzzingbrain-control/>
+
 The experiment asks a narrow question before a costly 68-bug sweep: can four
 model families complete the same full-scan task across one C, one C++, and one
 JVM challenge without infrastructure or protocol failures?
@@ -70,7 +72,7 @@ upstream benchmark discards those fields for vendor-prefixed model IDs. The
 published token counts remain valid; an upstream `$0` aggregate is not evidence
 of free usage.
 
-## Website development
+## Website development and deployment
 
 Requires Node.js 22.13 or newer.
 
@@ -79,6 +81,10 @@ npm install
 npm run dev
 npm test
 ```
+
+`npm run build` creates a static export under `out/`. Pushes to `main` deploy
+that artifact through `.github/workflows/pages.yml`; no server runtime or
+repository secret is required.
 
 ## Safety and publication boundary
 
