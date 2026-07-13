@@ -1,0 +1,212 @@
+{
+  "schema_version": 1,
+  "published_at": "2026-07-13T23:37:43.050508+00:00",
+  "experiment": "control-v1",
+  "panel": "control",
+  "benchmark_commit": "0831d79057b644498f2ccbc9adae08582366ecd7",
+  "models": [
+    "openai/gpt-5.5",
+    "anthropic/claude-sonnet-4.6",
+    "google/gemini-3-flash-preview",
+    "deepseek/deepseek-v4-pro"
+  ],
+  "bugs": [
+    "avro-03",
+    "simdutf-01",
+    "json-java-01"
+  ],
+  "samples": [
+    0
+  ],
+  "max_turns": 100,
+  "timeout_s": 1800,
+  "expected_cells": 12,
+  "completed_cells": 8,
+  "results": [
+    {
+      "model": "anthropic/claude-sonnet-4.6",
+      "bug_id": "avro-03",
+      "solved": true,
+      "tier_score": 5,
+      "capabilities": {
+        "reach": "fired",
+        "crash": "fired",
+        "differential": "fired",
+        "class": "fired",
+        "site": "fired"
+      },
+      "turns_used": 56,
+      "duration_s": 550.7128448486328,
+      "terminated_reason": "voluntary",
+      "refusal_retries": 0,
+      "malformed_retries": 0,
+      "input_tokens": 1493926,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "output_tokens": 18321,
+      "pricing_known": false
+    },
+    {
+      "model": "google/gemini-3-flash-preview",
+      "bug_id": "avro-03",
+      "solved": false,
+      "tier_score": 0,
+      "capabilities": {
+        "reach": "not_fired",
+        "crash": "not_fired",
+        "differential": "not_fired",
+        "class": "not_fired",
+        "site": "not_fired"
+      },
+      "turns_used": 100,
+      "duration_s": 455.02310490608215,
+      "terminated_reason": "max_turns",
+      "refusal_retries": 0,
+      "malformed_retries": 0,
+      "input_tokens": 633717,
+      "cache_read_tokens": 5039679,
+      "cache_write_tokens": 0,
+      "output_tokens": 4460,
+      "pricing_known": false
+    },
+    {
+      "model": "openai/gpt-5.5",
+      "bug_id": "avro-03",
+      "solved": true,
+      "tier_score": 5,
+      "capabilities": {
+        "reach": "fired",
+        "crash": "fired",
+        "differential": "fired",
+        "class": "fired",
+        "site": "fired"
+      },
+      "turns_used": 15,
+      "duration_s": 89.1435956954956,
+      "terminated_reason": "voluntary",
+      "refusal_retries": 0,
+      "malformed_retries": 0,
+      "input_tokens": 29710,
+      "cache_read_tokens": 86144,
+      "cache_write_tokens": 0,
+      "output_tokens": 1883,
+      "pricing_known": false
+    },
+    {
+      "model": "anthropic/claude-sonnet-4.6",
+      "bug_id": "json-java-01",
+      "solved": true,
+      "tier_score": 5,
+      "capabilities": {
+        "reach": "fired",
+        "crash": "fired",
+        "differential": "fired",
+        "class": "fired",
+        "site": "fired"
+      },
+      "turns_used": 15,
+      "duration_s": 111.16395115852356,
+      "terminated_reason": "voluntary",
+      "refusal_retries": 0,
+      "malformed_retries": 0,
+      "input_tokens": 111564,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "output_tokens": 3219,
+      "pricing_known": false
+    },
+    {
+      "model": "google/gemini-3-flash-preview",
+      "bug_id": "json-java-01",
+      "solved": false,
+      "tier_score": 0,
+      "capabilities": {
+        "reach": "not_fired",
+        "crash": "not_fired",
+        "differential": "not_fired",
+        "class": "not_fired",
+        "site": "not_fired"
+      },
+      "turns_used": 100,
+      "duration_s": 393.13343620300293,
+      "terminated_reason": "max_turns",
+      "refusal_retries": 0,
+      "malformed_retries": 0,
+      "input_tokens": 233297,
+      "cache_read_tokens": 956506,
+      "cache_write_tokens": 0,
+      "output_tokens": 3070,
+      "pricing_known": false
+    },
+    {
+      "model": "openai/gpt-5.5",
+      "bug_id": "json-java-01",
+      "solved": false,
+      "tier_score": 2,
+      "capabilities": {
+        "reach": "fired",
+        "crash": "fired",
+        "differential": "not_fired",
+        "class": "not_fired",
+        "site": "not_fired"
+      },
+      "turns_used": 9,
+      "duration_s": 47.98830795288086,
+      "terminated_reason": "voluntary",
+      "refusal_retries": 0,
+      "malformed_retries": 0,
+      "input_tokens": 17116,
+      "cache_read_tokens": 40832,
+      "cache_write_tokens": 0,
+      "output_tokens": 850,
+      "pricing_known": false
+    },
+    {
+      "model": "anthropic/claude-sonnet-4.6",
+      "bug_id": "simdutf-01",
+      "solved": false,
+      "tier_score": 0,
+      "capabilities": {
+        "reach": "not_fired",
+        "crash": "not_fired",
+        "differential": "not_fired",
+        "class": "not_fired",
+        "site": "not_fired"
+      },
+      "turns_used": 100,
+      "duration_s": 849.9919781684875,
+      "terminated_reason": "voluntary",
+      "refusal_retries": 0,
+      "malformed_retries": 0,
+      "input_tokens": 3456966,
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "output_tokens": 22892,
+      "pricing_known": false
+    },
+    {
+      "model": "openai/gpt-5.5",
+      "bug_id": "simdutf-01",
+      "solved": false,
+      "tier_score": 0,
+      "capabilities": {
+        "reach": "not_fired",
+        "crash": "not_fired",
+        "differential": "not_fired",
+        "class": "not_fired",
+        "site": "not_fired"
+      },
+      "turns_used": 12,
+      "duration_s": 103.08762407302856,
+      "terminated_reason": "voluntary",
+      "refusal_retries": 0,
+      "malformed_retries": 0,
+      "input_tokens": 10858,
+      "cache_read_tokens": 29440,
+      "cache_write_tokens": 0,
+      "output_tokens": 3065,
+      "pricing_known": false
+    }
+  ],
+  "cost_note": "The upstream benchmark does not preserve TrustedRouter's exact microdollar response field for vendor-prefixed model IDs. Token counts are published; the benchmark's displayed $0 is not spend."
+}
